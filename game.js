@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputs = Array.from(document.querySelectorAll(".box input"));
   const checkButton = document.getElementById("check");
   const hintsDisplay = document.getElementById("hints");
+  const triesDisplay = document.getElementById("tries");
   let chosenCode = "";
   let hints = [];
+  let tries = 3;
 
   // Load a random code and its hints
   fetch("codes.json")
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       chosenCode = data[randomKey].code;
       hints = data[randomKey].hints;
 
+      triesDisplay.innerHTML = `Tries remaining: ${tries}`;
       // Display hints
       hintsDisplay.innerHTML = `<strong>Hints:</strong> <br><br>${hints
         .map((hint, index) => `${index + 1}: ${hint}`)
@@ -29,17 +32,24 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Compare entered code with the chosen code
-    for (let i = 0; i < 5; i++) {
-      if (enteredCode[i] === chosenCode[i]) {
-        inputs[i].style.backgroundColor = "green"; // Correct digit
-      } else {
-        inputs[i].style.backgroundColor = "red"; // Incorrect digit
-      }
-    }
-
     if (enteredCode === chosenCode) {
       alert("Congratulations! The safe has opened!");
+    } else {
+      tries--;
+      triesDisplay.innerHTML = `Tries remaining: ${tries}`;
+
+      if (tries == 0) {
+        alert("Safe Unable to Unlock");
+        location.reload();
+      }
+
+      for (let i = 0; i < 5; i++) {
+        if (enteredCode[i] === chosenCode[i]) {
+          inputs[i].style.backgroundColor = "green";
+        } else {
+          inputs[i].style.backgroundColor = "red";
+        }
+      }
     }
   });
 });
