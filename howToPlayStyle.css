@@ -1,0 +1,84 @@
+body {
+  background-color: #4b0082;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  font-family: "Press Start 2P", cursive;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  color: #dc143c;
+}
+
+p {
+  color: yellow;
+}
+
+.Menu {
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+}
+
+.Menu button {
+  background-color: #dc143c;
+  color: aliceblue;
+  font-family: "Press Start 2P", "Arial Narrow", Arial, sans-serif;
+  padding: 20px;
+  font-size: larger;
+}
+
+.Menu button {
+  appearance: none;
+  background-color: #f81542;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #b84531 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Press Start 2P, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  background-color: #ffc229;
+  box-shadow: #ff14e0 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-73:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathLock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gameStyle.css" />
+  </head>
+  <body>
+    <h1>MathLock</h1>
+    <p id="hints"></p>
+    <div class="container">
+      <div class="box">
+        <input
+          type="text"
+          maxlength="1"
+          id="txt1"
+          autocomplete="off"
+          onkeyup="moveCursor(this, 'txt2')"
+        />
+      </div>
+      <div class="box">
+        <input
+          type="text"
+          maxlength="1"
+          id="txt2"
+          autocomplete="off"
+          onkeyup="moveCursor(this, 'txt3', 'txt1')"
+        />
+      </div>
+      <div class="box">
+        <input
+          type="text"
+          maxlength="1"
+          id="txt3"
+          autocomplete="off"
+          onkeyup="moveCursor(this, 'txt4', 'txt2')"
+        />
+      </div>
+      <div class="box">
+        <input
+          type="text"
+          maxlength="1"
+          id="txt4"
+          autocomplete="off"
+          onkeyup="moveCursor(this, 'txt5', 'txt3')"
+        />
+      </div>
+      <div class="box">
+        <input
+          type="text"
+          maxlength="1"
+          id="txt5"
+          autocomplete="off"
+          onkeyup="moveCursor(this, 'txt5', 'txt4')"
+        />
+      </div>
+
+      <script type="text/javascript">
+        function moveCursor(fromTextBox, toTextBox, prevTextBox) {
+          var length = fromTextBox.value.length;
+          var maxLength = fromTextBox.getAttribute("maxlength");
+          if (length == maxLength) {
+            document.getElementById(toTextBox)?.focus();
+          } else if (event.key === "Backspace" && length === 0) {
+            document.getElementById(prevTextBox)?.focus();
+          }
+        }
+      </script>
+    </div>
+    <button id="check" class="checkButton">Check</button>
+    <script src="game.js"></script>
+
+    <div class="restart">
+      <a href="game.html"><button id="home">Next Safe</button></a>
+    </div>
+  </body>
+</html>

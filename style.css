@@ -1,0 +1,55 @@
+body {
+  background-color: #4b0082;
+  color: #dc143c;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  border: 2px solid #ff6f61;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3em;
+  color: #dc143c;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5em;
+  margin: 10px 0 20px 0;
+}
+
+.math-symbols {
+  font-size: 5em;
+  margin: 20px 0;
+  color: #ffb400;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #dc143c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Press Start 2P", "Arial Narrow", Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #ff4a3d;
+}
+.container {
+  letter-spacing: -1px;
+}

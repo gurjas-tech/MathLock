@@ -1,0 +1,78 @@
+{
+  "code1": {
+    "hints": [
+      "The first digit = √25",
+      "The second digit = IX",
+      "The third digit = B",
+      "The fourth digit = 2nd decimal place of pi",
+      "The fifth digit = 5 - 10 / 5"
+    ],
+    "code": "59243"
+  },
+
+  "code2": {
+    "hints": [
+      "The first digit = 5th decimal place of pi",
+      "The second digit = H",
+      "The third digit = the 4th digit in the fibonacci sequence",
+      "The fourth digit = a factor of 21 and is less than 8",
+      "The fifth digit = 2 + 1 x 3"
+    ],
+    "code": "98215"
+  },
+
+  "code3": {
+    "hints": [
+      "The first digit = the number of planets in our solar system",
+      "The second digit = 1st digit of euler's number (e)",
+      "The third digit = VI",
+      "The fourth digit = the age of someone born in 2016 (as of 2024)",
+      "The fifth digit = 1st digit in the fibonacci sequence"
+    ],
+    "code": "82680"
+  },
+
+  "code4": {
+    "hints": [
+      "The first digit = the number of sides in a pentagon",
+      "The second digit = age difference between someone born in 2005 and 2010 (current year: 2024)",
+      "The third digit = 1 + 2 + 3 / 3",
+      "The fourth digit = A",
+      "The fifth digit = ALBERT"
+    ],
+    "code": "55416"
+  },
+
+  "code5": {
+    "hints": [
+      "The first digit = ALBERT",
+      "The second digit = Atomic number of Hydrogen",
+      "The third digit = Number of planets that come before Earth",
+      "The fourth digit = total number of planets in our solar system",
+      "The fifth digit = II"
+    ],
+    "code": "61282"
+  },
+
+  "code6": {
+    "hints": [
+      "The first digit = F",
+      "The second digit = 3rd decimal place of pi",
+      "The third digit = VIII",
+      "The fourth digit = 2nd digit in the fibonacci sequence",
+      "The fifth digit = 2 / 2 - 1"
+    ],
+    "code": "61810"
+  },
+
+  "code7": {
+    "hints": [
+      "The first digit = the age of someone born in 2016 (as of 2024)",
+      "The second digit = number of sides in a pentagon",
+      "The third digit = number of letters in 'diamond' ",
+      "The fourth digit = 5th decimal place in pi",
+      "The fifth digit = SAFE"
+    ],
+    "code": "85794"
+  }
+}
