@@ -118,5 +118,40 @@
       "The fifth digit = C"
     ],
     "code": "74703"
-  }
+  },
+
+"code12": {
+    "hints": [
+      "The first digit = Number of sides in a octagon",
+      "The second digit = number of months with 31 days",
+      "The third digit = 7 x 2 / 7",
+      "The fourth digit = Total number of continents",
+      "The fifth digit = age difference between someone born in 2008 and 2010 (current year: 2024)"
+    ],
+    "code": "87272"
+
+},
+
+"code13": {
+    "hints": [
+      "The first digit = the most repeated number in (313213)",
+      "The second digit = VIII - I",
+      "The third digit = 1st decimal in euler's number (e)",
+      "The fourth digit = the number of colours in the French Flag",
+      "The fifth digit = G"
+    ],
+    "code": "37737"
+
+},
+
+"code14": {
+    "hints": [
+      "The first digit = Number directly opposite to 9 on a clock",
+      "The second digit = number of continents",
+      "The third digit = number of colours on the English Flag",
+      "The fourth digit = Atomic number of helium",
+      "The fifth digit = number of months with 31 days"
+    ],
+    "code": "37227"
+
 }

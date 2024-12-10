@@ -31,7 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (enteredCode === chosenCode) {
+      for (let i = 0; i < 5; i++) {
+        inputs[i].style.backgroundColor = "green";
+      }
       alert("Congratulations! The safe has opened!");
+      location.reload();
     } else {
       tries--;
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
