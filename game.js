@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hintsDisplay = document.getElementById("hints");
   const triesDisplay = document.getElementById("tries");
   let chosenCode = "";
+  let lastChosenCode = ""; // Store the last chosen code
   let hints = [];
   let tries = 3;
 
@@ -11,8 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.json())
     .then((data) => {
       const keys = Object.keys(data);
-      const randomKey = keys[Math.floor(Math.random() * keys.length)];
+
+      // Ensure a new random key is selected that isn't the same as the last chosen one
+      let randomKey;
+      do {
+        randomKey = keys[Math.floor(Math.random() * keys.length)];
+      } while (data[randomKey].code === lastChosenCode);
+
       chosenCode = data[randomKey].code;
+      lastChosenCode = chosenCode; // Update last chosen code
       hints = data[randomKey].hints;
 
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
