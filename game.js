@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let hints = [];
   let tries = 3;
 
-  // Load a random code and its hints
   fetch("codes.json")
     .then((response) => response.json())
     .then((data) => {
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error loading JSON:", error));
 
-  // Check the entered code
   checkButton.addEventListener("click", () => {
     const enteredCode = inputs.map((input) => input.value).join("");
     if (enteredCode.length !== 5) {

@@ -74,5 +74,49 @@
       "The fifth digit = SAFE"
     ],
     "code": "85794"
+  },
+
+  "code8": {
+    "hints": [
+      "The first digit = sides in a hexagon",
+      "The second digit = 1st number in pi",
+      "The third digit = 1 + 1 + 1 x 3 ",
+      "The fourth digit = 2nd decimal in euler's number (e)",
+      "The fifth digit = IV"
+    ],
+    "code": "63514"
+  },
+
+  "code9": {
+    "hints": [
+      "The first digit = Number of planets after earth",
+      "The second digit = total number of planets",
+      "The third digit = number of letters in 'albert' ",
+      "The fourth digit = 6 - 3 x 2",
+      "The fifth digit = D"
+    ],
+    "code": "58604"
+  },
+
+  "code10": {
+    "hints": [
+      "The first digit = 1st decimal of pi",
+      "The second digit = number of planets that come before earth",
+      "The third digit = number of letters in 'Cat' ",
+      "The fourth digit = IV",
+      "The fifth digit = sides in a pentagon"
+    ],
+    "code": "12345"
+  },
+
+  "code11": {
+    "hints": [
+      "The first digit = VII",
+      "The second digit = the age of someone born in 2020 (as of 2024)",
+      "The third digit = number of days in a week ",
+      "The fourth digit = 1 - 0.5 X 2",
+      "The fifth digit = C"
+    ],
+    "code": "74703"
   }
 }
