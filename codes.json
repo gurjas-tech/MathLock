@@ -1,13 +1,13 @@
 {
   "code1": {
     "hints": [
-      "The first digit = √25",
+      "The first digit = number of colours in the American F;ag",
       "The second digit = IX",
       "The third digit = B",
       "The fourth digit = 2nd decimal place of pi",
       "The fifth digit = 5 - 10 / 5"
     ],
-    "code": "59243"
+    "code": "39243"
   },
 
   "code2": {
@@ -18,7 +18,7 @@
       "The fourth digit = a factor of 21 and is less than 8",
       "The fifth digit = 2 + 1 x 3"
     ],
-    "code": "98215"
+    "code": "98315"
   },
 
   "code3": {
@@ -37,10 +37,10 @@
       "The first digit = the number of sides in a pentagon",
       "The second digit = age difference between someone born in 2005 and 2010 (current year: 2024)",
       "The third digit = 1 + 2 + 3 / 3",
-      "The fourth digit = A",
+      "The fourth digit = the most repeated number in (2211122)",
       "The fifth digit = ALBERT"
     ],
-    "code": "55416"
+    "code": "55426"
   },
 
   "code5": {
@@ -114,10 +114,10 @@
       "The first digit = VII",
       "The second digit = the age of someone born in 2020 (as of 2024)",
       "The third digit = number of days in a week ",
-      "The fourth digit = 1 - 0.5 X 2",
+      "The fourth digit = Number of colours in the Swiss Flag",
       "The fifth digit = C"
     ],
-    "code": "74703"
+    "code": "74723"
   },
 
   "code12": {
@@ -162,5 +162,60 @@
       "The fifth digit = Number of days in a week (excluding weekends)"
     ],
     "code": "34415"
+  },
+
+  "code16": {
+    "hints": [
+      "The first digit = the largest single-digit number",
+      "The second digit =  the first digit of days in February in a leap year",
+      "The third digit = III",
+      "The fourth digit = number of sides in a triangle",
+      "The fifth digit = month number of April"
+    ],
+    "code": "92334"
+  },
+
+  "code17": {
+    "hints": [
+      "The first digit = half of 8 - half of 2",
+      "The second digit =  the last digit of days in February in a normal year",
+      "The third digit = number of colours in the Irish Flag",
+      "The fourth digit = number of olympic rings",
+      "The fifth digit = 2nd decimal of eulers number"
+    ],
+    "code": "38351"
+  },
+
+  "code18": {
+    "hints": [
+      "The first digit = number of countries in the UK",
+      "The second digit =  number of official languages in Canada",
+      "The third digit = 2nd decimal of pi",
+      "The fourth digit = number of sides in a heptagon",
+      "The fifth digit = number of time zones in Canada"
+    ],
+    "code": "42476"
+  },
+
+  "code19": {
+    "hints": [
+      "The first digit = number of letters in Albert",
+      "The second digit =  the number of months which get affected due to leap year",
+      "The third digit = number of sides in nonagon",
+      "The fourth digit = China's ranking on the most populated list",
+      "The fifth digit = month number of August"
+    ],
+    "code": "61928"
+  },
+
+  "code20": {
+    "hints": [
+      "The first digit = the day of the year when Canadians celebrate their national holiday.",
+      "The second digit =  How many provinces are in Canada ( if we dont count BC and AB)",
+      "The third digit = number of time zones in Canada",
+      "The fourth digit = the number of canadian teams in the NHL",
+      "The fifth digit = the number of oceans that border Canada"
+    ],
+    "code": "18673"
   }
 }
