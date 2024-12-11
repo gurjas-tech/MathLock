@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       const keys = Object.keys(data);
 
-      // Ensure a new random key is selected that isn't the same as the last chosen one
       let randomKey;
       do {
         randomKey = keys[Math.floor(Math.random() * keys.length)];
       } while (data[randomKey].code === lastChosenCode);
 
       chosenCode = data[randomKey].code;
-      lastChosenCode = chosenCode; // Update last chosen code
+      lastChosenCode = chosenCode;
       hints = data[randomKey].hints;
 
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
@@ -48,9 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
       tries--;
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
 
-      if (tries == 0) {
+      if (tries === 0) {
         alert("Safe Unable to Unlock");
-        location.reload();
+        setTimeout(() => location.reload(), 500);
+        return;
       }
 
       for (let i = 0; i < 5; i++) {
