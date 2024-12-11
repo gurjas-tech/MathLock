@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Congratulations!</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 3em;
+        color: #4caf50;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.5em;
+        color: #555;
+        margin-bottom: 30px;
+      }
+      .diamond {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url("diamond.png");
+        background-size: cover;
+        margin: 10px;
+        animation: sparkle 1s ease-in-out infinite;
+      }
+      @keyframes sparkle {
+        0% {
+          transform: scale(1) rotate(0);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2) rotate(45deg);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1) rotate(0);
+          opacity: 1;
+        }
+      }
+      .button {
+        margin-top: 30px;
+        padding: 15px 30px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Congratulations!</h1>
+    <p>You have unlocked all the safes and are now rich!</p>
+
+    <div>
+      <!-- Add some flying diamonds to celebrate -->
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+    </div>
+
+    <p>Take a moment to enjoy your success!</p>
+    <a href="index.html" class="button">Go Back to Main Page</a>
+  </body>
+</html>

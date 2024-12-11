@@ -1,7 +1,7 @@
 {
   "code1": {
     "hints": [
-      "The first digit = number of colours in the American F;ag",
+      "The first digit = number of colours in the American Flag",
       "The second digit = IX",
       "The third digit = B",
       "The fourth digit = 2nd decimal place of pi",
@@ -227,6 +227,6 @@
       "The fourth digit = the number of canadian teams in the NHL",
       "The fifth digit = 1st decimal in pi"
     ],
-    "code": "18673"
+    "code": "24471"
   }
 }
