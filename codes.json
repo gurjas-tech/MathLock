@@ -217,5 +217,16 @@
       "The fifth digit = the number of oceans that border Canada"
     ],
     "code": "18673"
+  },
+
+  "code21": {
+    "hints": [
+      "The first digit = the number of colours on the japanese flag",
+      "The second digit =  number of sides in a rectangle",
+      "The third digit = IV",
+      "The fourth digit = the number of canadian teams in the NHL",
+      "The fifth digit = 1st decimal in pi"
+    ],
+    "code": "18673"
   }
 }

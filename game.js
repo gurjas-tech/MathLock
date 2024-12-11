@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       const keys = Object.keys(data);
 
-      // Ensure a new random key is selected that isn't the same as the last chosen one
       let randomKey;
       do {
         randomKey = keys[Math.floor(Math.random() * keys.length)];
       } while (data[randomKey].code === lastChosenCode);
 
       chosenCode = data[randomKey].code;
-      lastChosenCode = chosenCode; // Update last chosen code
+      lastChosenCode = chosenCode;
       hints = data[randomKey].hints;
 
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
@@ -43,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         inputs[i].style.backgroundColor = "green";
       }
 
-      // Show the alert with flying diamonds
       const body = document.body;
       const diamondContainer = document.createElement("div");
       diamondContainer.style.position = "fixed";
@@ -60,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         diamond.style.position = "absolute";
         diamond.style.width = "20px";
         diamond.style.height = "20px";
-        diamond.style.backgroundImage = "url('diamond.png')"; // Replace with your diamond image
+        diamond.style.backgroundImage = "url('diamond.png')";
         diamond.style.backgroundSize = "cover";
         diamond.style.top = `${Math.random() * 100}%`;
         diamond.style.left = `${Math.random() * 100}%`;
@@ -86,8 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         alert("Congratulations! The safe has opened!");
-        location.reload(); // Load the next level
-      }, 1500); // Wait for 1.5 seconds
+        location.reload();
+      }, 1500);
     } else {
       tries--;
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
