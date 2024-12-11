@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hintsDisplay = document.getElementById("hints");
   const triesDisplay = document.getElementById("tries");
   let chosenCode = "";
-  let lastChosenCode = ""; // Store the last chosen code
+  let lastChosenCode = "";
   let hints = [];
   let tries = 3;
 
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
       hints = data[randomKey].hints;
 
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
-      // Display hints
       hintsDisplay.innerHTML = `<strong>Hints:</strong> <br><br>${hints
         .map((hint, index) => `${index + 1}: ${hint}`)
         .join("<br><br>")}`;
