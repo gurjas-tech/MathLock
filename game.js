@@ -3,17 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkButton = document.getElementById("check");
   const hintsDisplay = document.getElementById("hints");
   const triesDisplay = document.getElementById("tries");
-  var winCounts = 0;
+  const winsDisplay = document.getElementById("wins");
   let chosenCode = "";
   let lastChosenCode = "";
   let hints = [];
   let tries = 3;
+  let consecutiveWins = 0;
+
+  function resetGame() {
+    tries = 3;
+    triesDisplay.innerHTML = `Tries remaining: ${tries}`;
+    winsDisplay.innerHTML = `Consecutive Wins: ${consecutiveWins}`;
+    inputs.forEach((input) => {
+      input.value = "";
+      input.style.backgroundColor = "";
+    });
+  }
 
   fetch("codes.json")
     .then((response) => response.json())
     .then((data) => {
       const keys = Object.keys(data);
-
       let randomKey;
       do {
         randomKey = keys[Math.floor(Math.random() * keys.length)];
@@ -23,10 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
       lastChosenCode = chosenCode;
       hints = data[randomKey].hints;
 
-      triesDisplay.innerHTML = `Tries remaining: ${tries}`;
       hintsDisplay.innerHTML = `<strong>Hints:</strong> <br><br>${hints
         .map((hint, index) => `${index + 1}: ${hint}`)
         .join("<br><br>")}`;
+
+      resetGame();
     })
     .catch((error) => console.error("Error loading JSON:", error));
 
@@ -38,12 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (enteredCode === chosenCode) {
-      winCounts++;
       for (let i = 0; i < 5; i++) {
         inputs[i].style.backgroundColor = "green";
-      }
-      if (winCounts == 10) {
-        window.open("congratulations.html");
       }
 
       const body = document.body;
@@ -73,39 +80,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const style = document.createElement("style");
       style.textContent = `
-  @keyframes fly {
- 0% {
-  transform: translateY(0) scale(1);
-  opacity: 1;
- }
-   100% {
-  transform: translateY(-200px) scale(0.5);
-   opacity: 0;
-  }
-}
-  `;
+      @keyframes fly {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-200px) scale(0.5);
+          opacity: 0;
+        }
+      }`;
       document.head.appendChild(style);
 
       setTimeout(() => {
         alert("Congratulations! The safe has opened! You found a Diamond");
-        location.reload();
+        consecutiveWins++;
+        winsDisplay.innerHTML = `Consecutive Wins: ${consecutiveWins}`;
+        if (consecutiveWins >= 5) {
+          window.location.href = "congratulations.html";
+        } else {
+          fetch("codes.json")
+            .then((response) => response.json())
+            .then((data) => {
+              const keys = Object.keys(data);
+              let randomKey;
+              do {
+                randomKey = keys[Math.floor(Math.random() * keys.length)];
+              } while (data[randomKey].code === lastChosenCode);
+
+              chosenCode = data[randomKey].code;
+              lastChosenCode = chosenCode;
+              hints = data[randomKey].hints;
+              hintsDisplay.innerHTML = `<strong>Hints:</strong> <br><br>${hints
+                .map((hint, index) => `${index + 1}: ${hint}`)
+                .join("<br><br>")}`;
+              resetGame();
+            });
+        }
       }, 1500);
     } else {
       tries--;
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
-
       if (tries === 0) {
         alert("Uh-Oh, you've been caught. Try Again");
+        consecutiveWins = 0;
+        winsDisplay.innerHTML = `Consecutive Wins: ${consecutiveWins}`;
         window.location.href = "index.html";
         return;
       }
 
       for (let i = 0; i < 5; i++) {
-        if (enteredCode[i] === chosenCode[i]) {
-          inputs[i].style.backgroundColor = "green";
-        } else {
-          inputs[i].style.backgroundColor = "red";
-        }
+        inputs[i].style.backgroundColor =
+          enteredCode[i] === chosenCode[i] ? "green" : "red";
       }
     }
   });
