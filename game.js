@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkButton = document.getElementById("check");
   const hintsDisplay = document.getElementById("hints");
   const triesDisplay = document.getElementById("tries");
+  var winCounts = 0;
   let chosenCode = "";
   let lastChosenCode = "";
   let hints = [];
@@ -37,8 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (enteredCode === chosenCode) {
+      winCounts++;
       for (let i = 0; i < 5; i++) {
         inputs[i].style.backgroundColor = "green";
+      }
+      if (winCounts == 10) {
+        window.open("congratulations.html");
       }
 
       const body = document.body;

@@ -1,0 +1,67 @@
+body {
+  background-color: indigo;
+}
+
+.title {
+  font-family: "Press Start 2P", Helvetica, Arial, sans-serif;
+  font-size: larger;
+  color: white;
+  outline: none;
+  padding: 16px 55px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+.congrats {
+  font-family: "Press Start 2P", Helvetica, Arial, sans-serif;
+  font-size: larger;
+  color: yellow;
+  outline: none;
+  padding: 16px 55px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+.safe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+}
+.return {
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+}
+.return button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: white;
+  background-color: #dc143c;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Press Start 2P", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 55px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  justify-content: right;
+}
+
+.checkButton:disabled {
+  pointer-events: none;
+}
