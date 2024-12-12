@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hintsDisplay = document.getElementById("hints");
   const triesDisplay = document.getElementById("tries");
   let chosenCode = "";
-  let lastChosenCode = ""; // Store the last chosen code
+  let lastChosenCode = "";
   let hints = [];
   let tries = 3;
 
@@ -13,18 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       const keys = Object.keys(data);
 
-      // Ensure a new random key is selected that isn't the same as the last chosen one
       let randomKey;
       do {
         randomKey = keys[Math.floor(Math.random() * keys.length)];
       } while (data[randomKey].code === lastChosenCode);
 
       chosenCode = data[randomKey].code;
-      lastChosenCode = chosenCode; // Update last chosen code
+      lastChosenCode = chosenCode;
       hints = data[randomKey].hints;
 
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
-      // Display hints
       hintsDisplay.innerHTML = `<strong>Hints:</strong> <br><br>${hints
         .map((hint, index) => `${index + 1}: ${hint}`)
         .join("<br><br>")}`;
@@ -43,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         inputs[i].style.backgroundColor = "green";
       }
 
-      // Show the alert with flying diamonds
       const body = document.body;
       const diamondContainer = document.createElement("div");
       diamondContainer.style.position = "fixed";
@@ -60,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         diamond.style.position = "absolute";
         diamond.style.width = "20px";
         diamond.style.height = "20px";
-        diamond.style.backgroundImage = "url('diamond.png')"; // Replace with your diamond image
+        diamond.style.backgroundImage = "url('diamond.png')";
         diamond.style.backgroundSize = "cover";
         diamond.style.top = `${Math.random() * 100}%`;
         diamond.style.left = `${Math.random() * 100}%`;
@@ -71,30 +68,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const style = document.createElement("style");
       style.textContent = `
-        @keyframes fly {
-          0% {
-            transform: translateY(0) scale(1);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(-200px) scale(0.5);
-            opacity: 0;
-          }
-        }
-      `;
+  @keyframes fly {
+ 0% {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+ }
+   100% {
+  transform: translateY(-200px) scale(0.5);
+   opacity: 0;
+  }
+}
+  `;
       document.head.appendChild(style);
 
       setTimeout(() => {
-        alert("Congratulations! The safe has opened! You found a diamond");
-        location.reload(); // Load the next level
-      }, 1500); // Wait for 1.5 seconds
+        alert("Congratulations! The safe has opened! You found a Diamond");
+        location.reload();
+      }, 1500);
     } else {
       tries--;
       triesDisplay.innerHTML = `Tries remaining: ${tries}`;
 
       if (tries === 0) {
         alert("Uh-Oh, you've been caught. Try Again");
-        window.location.href = "index.html"; // Redirect to index.html
+        window.location.href = "index.html";
         return;
       }
 
